@@ -1,0 +1,5 @@
+ev3-dc==0.9.10.2
+google-genai==2.22.0
+edge-tts==7.3.1
+opencv-python==5.0.0.93
+pygame==2.1.2

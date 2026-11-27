@@ -1,0 +1,195 @@
+======================================================================
+config.json
+======================================================================
+
+This is an explaination of the config.json file in this project. 
+The config is by default contains the necessary settings for the default theater to work. 
+If you have not built the robot according to the theater_model.ldr file, you will need to manually adjust the configuration settings according to your robot's hardware.
+Nevertheless, you should still look through thsi file and the config.json file to make sure performance is optimal for your robot.
+
+script
+---------
+Type:         String
+Default:      "gemini-generate"
+Description:  The script for the theater to execute. If the user would like to generate a new play, use "gemini-generate". Otherwise, it should be the file name of a script in the saved_scripts folder. (NOT including the extension or path.)
+
+log_level 
+---------
+Type:         String
+Default:      "WARNING"
+Description:  The level of information to outputted in the terminal. This may be "DEBUG", "INFO", "WARNING", "ERROR", or "CRITICAL".
+
+use_screen
+---------
+Type:         Bool
+Default:      true
+Description:  Whether or not the code should create a window to display backgrounds.
+
+start_music 
+---------
+Type:         String
+Default:      "epic_climax_music"
+Description:  The song to play during setup and before the play. This must be one of the songs in the background_music folder (NOT including the file's extension or path).
+
+
+end_music
+---------
+Type:         String
+Default:      "epic_climax_music"
+Description:  The song to play at the end of the play while the code finishes and the actors bow. This must be one of the songs in the background_music folder (NOT including the file's extension or path).
+
+ev3_hub_protocol
+---------
+Type:         String
+Default:      "USB"
+Description:  The protocol to use to connect to the ev3 hub. This may be "USB" or "BLUETOOTH".
+
+ev3_hub_mac_address
+---------
+Type:         String
+Default:      ""
+Description:  The MAC address of the ev3 hub to connect to. This is only required if the ev3_hub_protocol is set to "BLUETOOTH". If the ev3_hub_protocol is set to "USB", this can be left as an empty string.
+
+figure_one_motor_port
+---------
+Type:         String
+Default:      "PORT_B"
+Description:  The motor port on the ev3 hub connected to the figure 1 motor (also called actor_1). This may be "PORT_A", "PORT_B", "PORT_C", or "PORT_D".
+
+figure_two_motor_port
+---------
+Type:         String
+Default:      "PORT_C"
+Description:  The motor port on the ev3 hub connected to the figure 2 motor (also called actor_2). This may be "PORT_A", "PORT_B", "PORT_C", or "PORT_D".
+
+turning_object_motor_port
+---------
+Type:         String
+Default:      "PORT_A"
+Description:  The motor port on the ev3 hub connected to the turning object motor (also called the spinning object). This may be "PORT_A", "PORT_B", "PORT_C", or "PORT_D".
+
+flying_object_motor_port
+---------
+Type:         String
+Default:      "PORT_D"
+Description:  The motor port on the ev3 hub connected to the flying object motor (also called the flying item). This may be "PORT_A", "PORT_B", "PORT_C", or "PORT_D".
+
+stage_left_position
+---------
+Type:         Integer
+Default:      140
+Description:  The amount of degrees that figure 1 and figure 2 should be rotated in order to move to the left side of the stage.
+
+
+stage_center_position 
+---------
+Type:         Integer
+Default:      430
+Description:  The amount of degrees that figure 1 and figure 2 should be rotated in order to move to the center of the stage.
+
+
+stage_right_position
+---------
+Type:         Integer
+Default:      680
+Description:  The amount of degrees that figure 1 and figure 2 should be rotated in order to move to the right side of the stage.
+
+
+move_speed
+---------
+Type:         Integer
+Default:      80
+Description:  The speed at which figure 1 and figure 2 move at. This may be a value between 1 and 100, where 100 is the fastest.
+
+
+figure_one_brake
+---------
+Type:         Bool
+Default:      true
+Description:  Whether figure 1 should brake and hold the motor in place when it reaches its target position.
+
+
+figure_two_brake
+---------
+Type:         Bool
+Default:      true
+Description:  Whether figure 2 should brake and hold the motor in place when it reaches its target position.
+
+
+jiggle_actors
+---------
+Type:         Bool
+Default:      true
+Description:  Whether the figure 1 and figure 2 motors should jiggle while they speak. 
+
+jiggle_speed
+---------
+Type:         Integer
+Default:      25
+Description:  The speed at which figure 1 and figure 2 jiggle while they speak. (If jiggle_actors is set to True.)
+
+jiggle_degrees_range
+---------
+Type:         Integer
+Default:      3
+Description:  The range of degrees that figure 1 and figure 2 should jiggle by back and forth while the speak. (If jiggle_actors is set to True.)
+
+flying_object_drop_degrees 
+---------
+Type:         Integer
+Default:      -1500
+Description:  The amount of degrees that the flying object motor should rotate in order to lower the flying object.
+
+flying_object_speed
+---------
+Type:         Integer
+Default:      100
+Description:  The speed at which the flying object motor moves at. This may be a value between 1 and 100, where 100 is the fastest.
+
+flying_object_thread
+---------
+Type:         Bool
+Default:      false
+Description:  Whether the program should wait to continue until the flying object motor finishes its movement.
+
+flying_object_brake
+---------
+Type:         Bool
+Default:      true
+Description:  Whether the flying object motor should brake and hold the motor in place after it reaches its target position.
+
+spinning_object_180_degree_turn
+---------
+Type:         Integer
+Default:      180
+Description:  The amount of degrees that the spinning object motor should rotate in order to make a 180 degree turn. (This should be 180 unless gear ratios are used.)
+
+spinning_object_speed
+---------
+Type:         Integer
+Default:      50
+Description:  The speed at which the spinning object motor moves at. This may be a value between 1 and 100, where 100 is the fastest.
+
+spinning_object_thread
+---------
+Type:         Bool
+Default:      false
+Description:  Whether the program should wait to continue until the spinning object motor finishes its movement.
+
+spinning_object_brake
+---------
+Type:         Bool
+Default:      true
+Description:  Whether the spinning object motor should brake and hold the motor in place after it reaches its target position.
+
+tts_generate_wait_time
+---------
+Type:         Float
+Default:      0.5
+Description:  The time to wait between each attempt to generate the TTS audio.
+
+tts_generate_attempts
+---------
+Type:         Integer
+Default:      3
+Description:  The number of attempts to generate the TTS audio before giving up and skipping the actor's line.

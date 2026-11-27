@@ -1,0 +1,29 @@
+{
+    "setup": {
+        "actors" : {
+            "actor_1" : ["ninja-figure", "en-US-AndrewNeural"],
+            "actor_2" : ["heroic-figure", "en-US-RogerNeural"],
+            "flying_item" : ["head-of-wisdom", "en-US-GuyNeural"],
+            "turning_item" : ["orb_behind_rock", "no-voice"]
+        }
+    },
+    "scenes" : [
+            {"backdrop" : "savana",
+            "background_music" : "epic_climax_music",
+            "actions" : [
+                "ninja-figure move stage-left",
+                "heroic-figure move stage-left",
+                "ninja-figure say Where is the head of wisdom?",
+                "head-of-wisdom lower",
+                "heroic-figure say Look up there! There he is!",
+                "head-of-wisdom say I is the head of wisdom!",
+                "head-of-wisdom raise",
+                "ninja-figure move offstage",
+                "heroic-figure move offstage",
+                "orb spin",
+                "wait 1",
+                "orb spin"
+                ]
+            }
+    ]
+}

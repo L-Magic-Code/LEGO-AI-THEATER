@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+user_feedback.txt
+saved_scripts/*.json
+!saved_scripts/sample_script.json
+
+.env
+.env.*
+!.env.example

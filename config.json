@@ -1,0 +1,44 @@
+{
+    "script" : "The_Quest_for_the_Quirky_Relics_1",
+    "log_level" : "WARNING",
+
+    "use_screen" : true,
+
+    "start_music" : "epic_climax_music",
+    "end_music" : "epic_climax_music",
+
+    "ev3_hub_protocol" : "USB",
+    "ev3_hub_mac_address" : "",
+
+    "figure_one_motor_port" : "PORT_B",
+    "figure_two_motor_port" : "PORT_C",
+    "turning_object_motor_port" : "PORT_A",
+    "flying_object_motor_port" : "PORT_D",
+
+    "stage_left_position" : 140,
+    "stage_center_position" : 430,
+    "stage_right_position" : 680,
+
+    "move_speed" : 80,
+    "figure_one_brake" : true,
+    "figure_two_brake" : true,
+
+    "jiggle_actors" : true,
+    "jiggle_speed" : 25,
+    "jiggle_degrees_range" : 3,
+
+    "flying_object_drop_degrees" : -1500,
+    "flying_object_speed" : 100,
+    "flying_object_thread" : false,
+    "flying_object_brake" : true,
+
+
+    "spinning_object_180_degree_turn" : 180,
+    "spinning_object_speed" : 50,
+    "spinning_object_thread" : false,
+    "spinning_object_brake" : true,
+
+
+    "tts_generate_wait_time" : 0.5,
+    "tts_generate_attempts" : 3
+}
